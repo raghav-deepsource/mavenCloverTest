@@ -23,6 +23,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: apt install maven\
+      run: sudo apt install maven\
            mvn clover:instrument clover:aggregate clover:clover\
            cat target/site/clover/clover.xml
