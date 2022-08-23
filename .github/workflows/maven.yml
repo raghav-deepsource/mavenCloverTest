@@ -18,5 +18,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build with Maven
       run: sudo apt update -y; sudo apt install openjdk-11-jdk maven;\
-           /usr/bin/mvn clover:instrument clover:aggregate clover:clover;\
+           /usr/share/maven/bin/mvn clover:instrument clover:aggregate clover:clover;\
            cat target/site/clover/clover.xml;
